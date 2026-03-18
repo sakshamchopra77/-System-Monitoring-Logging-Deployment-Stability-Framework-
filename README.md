@@ -38,3 +38,36 @@ A production-ready backend system built using FastAPI that monitors system perfo
 ├── README.md
 └── .gitignore
 
+
+---
+
+## ▶️ Run Locally
+
+```bash
+pip install -r requirements.txt
+python -m uvicorn app:app --reload
+
+OPEN
+http://127.0.0.1:8000
+
+RUN WITH DOCKER
+docker build -t ai-monitoring .
+docker run -p 8000:8000 ai-monitoring
+
+RUN WITH DOCKER COMPOSE
+docker compose up --build
+OPEN
+http://localhost:8000
+
+🔍 API Endpoints
+Endpoint	Description
+/	Welcome message
+/health	Health check
+/metrics	CPU & Memory usage
+/logs	View application logs
+
+⚠️ Alert Conditions
+
+CPU usage > 80%
+
+Memory usage > 80%
