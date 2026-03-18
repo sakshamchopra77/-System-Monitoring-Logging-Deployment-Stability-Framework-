@@ -1,2 +1,3 @@
 def send_alert(message):
-    print(f"ALERT: {message}")
+    with open("alerts.log", "a") as f:
+        f.write(f"ALERT: {message}\n")

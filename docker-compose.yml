@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  ai-monitoring:
+    build: .
+    container_name: ai-monitoring-container
+    ports:
+      - "8000:8000"
+    restart: always
